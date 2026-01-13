@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Easy Semester | Stress-Free College Planning</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#f9fafb; color:#111; }
+    header { background:#000000; color:white; padding:60px 20px; text-align:center; position:relative; }
+    header h1 { font-size:2.5rem; margin-bottom:10px; }
+    header p { font-size:1.1rem; max-width:720px; margin:0 auto 20px; }
+    header a { background:#264aac; color:white; padding:14px 28px; border-radius:8px; text-decoration:none; font-weight:bold; }
+    .logo { position:absolute; top:20px; left:20px; font-size:1.5rem; font-weight:bold; color:white; }
+
+    section { padding:60px 20px; max-width:1100px; margin:auto; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:30px; }
+    .card { background:white; padding:30px; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.05); }
+    .card h3 { margin-top:0; }
+
+    .pricing { text-align:center; }
+    .price { font-size:2.2rem; font-weight:bold; margin:20px 0; }
+
+    .stars { color: gold; font-size: 1.1rem; margin-bottom: 10px; }
+
+    footer { background:#111827; color:#9ca3af; padding:30px; text-align:center; }
+    footer a { color:#9ca3af; text-decoration:underline; margin:0 6px; }
+
+  /* NAVBAR */
+.navbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: white;
+  height: 2px;
+  width: 20px;
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+/* MOBILE MENU */
+.nav-links {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 56px;
+    right: 20px;
+    background: #1f2937;
+    border-radius: 10px;
+    padding: 10px 0;
+    flex-direction: column;
+    min-width: 160px;
+  }
+
+  .nav-links a {
+  padding: 10px 16px;
+  font-size: 0.95rem;
+}
+
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Easy Semester</div>
+
+  <div class="navbar">
+  <div class="nav-links" id="navLinks">
+  <a href="example.html">Example Calendar</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+
+  <h1>Plan Your Semester Without the Stress</h1>
+  <p>
+    Easy Semester creates a personalized, day-by-day semester calendar from your syllabi so you always know what to work on — and when.
+  </p>
+  <a href="#signup">Get Your Custom Semester Plan</a>
+</header>
+
+
+<section>
+  <h2 style="text-align:center">How It Works</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1. Submit Your Course Information</h3>
+      <p>Upload your syllabi, exam dates, and key commitments using a short, secure form.</p>
+    </div>
+    <div class="card">
+      <h3>2. Your Semester Is Organized</h3>
+      <p>Every assignment, exam, and deadline is manually organized into a clear, realistic calendar.  Readings, lectures, and class meeting days are also included.</p>
+    </div>
+    <div class="card">
+      <h3>3. Stay On Track All Term</h3>
+      <p>You receive a clean, easy-to-follow Google Calendar from week one through finals.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pricing">
+  <h2>Simple, One-Time Pricing</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Full Semester Plan</h3>
+      <p class="price">$99</p>
+      <p>
+        A complete, personalized semester calendar including assignments, exams, and weekly planning. (Delivered with 7 days)
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Rush Delivery</h3>
+      <p class="price">+ $45</p>
+      <p>
+        Receive your calendar within <strong>48 hours</strong>.
+      </p>
+      <p style="font-size:0.9rem; color:#6b7280;">
+        Optional add-on at checkout
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- NEW SECTION -->
+<section>
+  <h2 style="text-align:center">What Happens After Payment?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1. Secure Checkout</h3>
+      <p>You complete payment through Stripe — fast, secure, and one-time.</p>
+    </div>
+    <div class="card">
+      <h3>2. Submit Your Courses</h3>
+      <p>You’ll immediately receive access to a form where you upload your syllabi, course details, and other relevant information.</p>
+    </div>
+    <div class="card">
+      <h3>3. Calendar Delivery</h3>
+      <p>Your personalized semester calendar is delivered digitally within the selected timeframe.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 style="text-align:center">What Students Are Saying</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      <p>“This made my semester feel manageable for the first time.”</p>
+      <strong>— Sarah L., Biology Major</strong>
+    </div>
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      <p>“All my deadlines in one place reduced my stress immediately.”</p>
+      <strong>— Mark R., Business Student</strong>
+    </div>
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      <p>“Worth every dollar. I always knew what to work on.”</p>
+      <strong>— Emily T., Psychology</strong>
+    </div>
+  </div>
+</section>
+
+<section id="signup" style="text-align:center">
+  <h2>Get Started</h2>
+  <p>Complete a short form and get a fully organized semester plan.</p>
+
+  <a 
+    href="https://buy.stripe.com/test_4gM3cv017bey3XX8TK7g400"
+    target="_blank"
+    style="
+      display:inline-block;
+      background:#264aac;
+      color:white;
+      padding:16px 32px;
+      border-radius:10px;
+      font-size:1.1rem;
+      font-weight:bold;
+      text-decoration:none;
+    ">
+    Start My Semester Plan
+  </a>
+
+  <p style="margin-top:20px; color:#6b7280; font-size:0.9rem;">
+    Secure checkout • One-time payment • No subscription
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Easy Semester. All rights reserved.</p>
+  <p>
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="terms.html">Terms of Service</a>
+  </p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  }
+</script>
+
+
+</body>
+</html>
+

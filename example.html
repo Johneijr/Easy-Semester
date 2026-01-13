@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example Semester Calendar | Easy Semester</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      color: #111;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .calendar-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .calendar-item {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .calendar-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .calendar-item img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .caption {
+      margin-top: 12px;
+      color: #374151;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #4f46e5;
+      color: white;
+      padding: 16px 36px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #4f46e5;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Example Semester Calendar</h1>
+  <p>Here’s what your personalized semester plan will look like in Google Calendar.</p>
+</header>
+
+<section>
+  <div class="calendar-stack">
+
+    <div class="calendar-item">
+      <img src="https://github.com/Johneijr/Card-Images/blob/main/JC.jpg?raw=true" alt="Full semester overview">
+      <div class="caption">
+        Full semester overview with all assignments, exams, and key dates mapped out.
+      </div>
+    </div>
+
+    <div class="calendar-item">
+      <img src="https://github.com/Johneijr/Card-Images/blob/main/FC.jpg?raw=true" alt="Weekly task breakdown">
+      <div class="caption">
+        Weekly breakdown showing exactly what to work on each day.
+      </div>
+    </div>
+
+    <div class="calendar-item">
+      <img src="https://github.com/Johneijr/Card-Images/blob/main/MC.jpg?raw=true" alt="Exam preparation timeline">
+      <div class="caption">
+        Exams and major deadlines spaced out into manageable prep timelines.
+      </div>
+    </div>
+
+    <div class="calendar-item">
+      <img src="https://github.com/Johneijr/Card-Images/blob/main/AC.jpg?raw=true" alt="Balanced schedule view">
+      <div class="caption">
+        A realistic schedule that balances classes, studying, and personal time.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cta">
+    <a 
+    href="https://buy.stripe.com/test_4gM3cv017bey3XX8TK7g400"
+    target="_blank"
+    style="
+      display:inline-block;
+      background:#4f46e5;
+      color:white;
+      padding:16px 32px;
+      border-radius:10px;
+      font-size:1.1rem;
+      font-weight:bold;
+      text-decoration:none;
+    ">
+    Start My Semester Plan
+  </a>
+  </div>
+
+  <a href="index.html" class="back">← Back to Home</a>
+</section>
+
+<script>
+  const items = document.querySelectorAll('.calendar-item');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  items.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>
+
